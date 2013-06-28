@@ -1,0 +1,29 @@
+%p#notice= flash[:notice]
+
+%p
+  %strong Name
+  = @bear.name
+
+%p
+  %strong Color
+  = @bear.color
+
+%p
+  %strong Description
+  = @bear.description
+
+%p
+  %strong Habitat
+  = @bear.habitat
+
+%p
+  %strong Picture
+  = @bear.picture
+
+= link_to 'Edit', edit_bear_path(@bear)
+|
+= link_to 'Back', bears_path
+|
+= link_to 'Delete', bears_path(@bear), method: "delete", data: {confirm: 'Are you sure?'}
+
+
