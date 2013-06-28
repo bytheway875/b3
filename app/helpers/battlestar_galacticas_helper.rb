@@ -1,0 +1,2 @@
+module BattlestarGalacticasHelper
+end

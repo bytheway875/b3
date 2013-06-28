@@ -1,0 +1,29 @@
+<%= form_for(@battlestar_galactica) do |f| %>
+  <% if @battlestar_galactica.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@battlestar_galactica.errors.count, "error") %> prohibited this battlestar_galactica from being saved:</h2>
+
+      <ul>
+      <% @battlestar_galactica.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :actor %><br />
+    <%= f.text_field :actor %>
+  </div>
+  <div class="field">
+    <%= f.label :character %><br />
+    <%= f.text_field :character %>
+  </div>
+  <div class="field">
+    <%= f.label :quote %><br />
+    <%= f.text_field :quote %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

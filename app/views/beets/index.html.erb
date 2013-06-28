@@ -1,0 +1,29 @@
+<h1>Listing beets</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Color</th>
+    <th>Description</th>
+    <th>Picture</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @beets.each do |beet| %>
+  <tr>
+    <td><%= beet.name %></td>
+    <td><%= beet.color %></td>
+    <td><%= beet.description %></td>
+    <td><%= beet.picture %></td>
+    <td><%= link_to 'Show', beet %></td>
+    <td><%= link_to 'Edit', edit_beet_path(beet) %></td>
+    <td><%= link_to 'Destroy', beet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Beet', new_beet_path %>

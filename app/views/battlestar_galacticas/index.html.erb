@@ -1,0 +1,27 @@
+<h1>Listing battlestar_galacticas</h1>
+
+<table>
+  <tr>
+    <th>Actor</th>
+    <th>Character</th>
+    <th>Quote</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @battlestar_galacticas.each do |battlestar_galactica| %>
+  <tr>
+    <td><%= battlestar_galactica.actor %></td>
+    <td><%= battlestar_galactica.character %></td>
+    <td><%= battlestar_galactica.quote %></td>
+    <td><%= link_to 'Show', battlestar_galactica %></td>
+    <td><%= link_to 'Edit', edit_battlestar_galactica_path(battlestar_galactica) %></td>
+    <td><%= link_to 'Destroy', battlestar_galactica, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Battlestar galactica', new_battlestar_galactica_path %>
